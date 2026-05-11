@@ -181,7 +181,7 @@ function AppPage() {
         {/* Features */}
         <section className="relative px-6 pb-24">
           <div className="mx-auto grid max-w-6xl gap-4 md:grid-cols-2">
-            {app.features.map((f, i) => (
+            {app.features.map((f: string, i: number) => (
               <motion.div
                 key={f}
                 initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
