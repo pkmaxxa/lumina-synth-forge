@@ -86,16 +86,15 @@ function AppPage() {
                 className="relative mx-auto"
               >
                 <motion.div
-                  className="relative flex h-44 w-44 items-center justify-center rounded-[2rem] text-7xl md:h-56 md:w-56 md:text-8xl"
+                  className="relative flex h-44 w-44 items-center justify-center overflow-hidden rounded-[2rem] md:h-56 md:w-56"
                   style={{
                     background: `linear-gradient(135deg, ${accentSoft}, oklch(0.78 0.2 ${app.hue} / 0.04))`,
                     border: `1px solid ${accentSoft}`,
                     boxShadow: `0 30px 80px -20px ${accent}, inset 0 1px 0 oklch(1 0 0 / 0.2)`,
-                    color: `oklch(0.95 0.12 ${app.hue})`,
                   }}
                   animate={{ y: [0, -8, 0] }} transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
                 >
-                  {app.glyph}
+                  <img src={app.icon} alt={`${app.name} icon`} width={512} height={512} className="h-full w-full object-cover" />
                   <div className="pointer-events-none absolute inset-0 rounded-[2rem] opacity-60 blur-2xl" style={{ background: accentSoft }} />
                 </motion.div>
               </motion.div>
@@ -161,14 +160,14 @@ function AppPage() {
                 backgroundSize: "60px 60px",
                 maskImage: "radial-gradient(ellipse at center, black 30%, transparent 80%)",
               }} />
-              {/* central glyph */}
+              {/* central icon */}
               <motion.div
-                className="absolute inset-0 flex items-center justify-center text-[14rem] md:text-[20rem]"
-                style={{ color: accent, filter: "drop-shadow(0 0 40px " + accent + ")" }}
+                className="absolute inset-0 flex items-center justify-center"
+                style={{ filter: "drop-shadow(0 0 40px " + accent + ")" }}
                 animate={{ scale: [1, 1.05, 1], rotate: [0, 4, 0] }}
                 transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
               >
-                {app.glyph}
+                <img src={app.icon} alt={`${app.name} preview`} width={512} height={512} className="h-64 w-64 object-contain md:h-96 md:w-96" />
               </motion.div>
               <div className="absolute bottom-6 left-6 right-6 flex items-center justify-between font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
                 <span>Live preview · {app.tag}</span>
@@ -213,12 +212,13 @@ function AppPage() {
                 <Link key={o.id} to="/apps/$appId" params={{ appId: o.id as AppId }}
                   className="group rounded-2xl glass p-5 transition-all hover:translate-y-[-3px]">
                   <div className="flex items-center gap-3">
-                    <span className="flex h-10 w-10 items-center justify-center rounded-xl text-lg"
+                    <span className="flex h-10 w-10 items-center justify-center overflow-hidden rounded-xl"
                       style={{
                         background: `oklch(0.78 0.2 ${o.hue} / 0.2)`,
-                        color: `oklch(0.95 0.1 ${o.hue})`,
                         border: `1px solid oklch(0.78 0.2 ${o.hue} / 0.4)`,
-                      }}>{o.glyph}</span>
+                      }}>
+                      <img src={o.icon} alt={`${o.name} icon`} loading="lazy" width={512} height={512} className="h-full w-full object-cover" />
+                    </span>
                     <div>
                       <div className="text-sm font-medium">{o.name}</div>
                       <div className="font-mono text-[9px] uppercase tracking-[0.3em] text-muted-foreground">{o.tag}</div>

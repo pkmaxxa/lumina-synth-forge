@@ -46,15 +46,14 @@ export default function AppPanel({ app, index }: { app: AppMeta; index: number }
         <div className="relative z-10 flex h-full flex-col gap-6" style={{ transform: "translateZ(40px)" }}>
           <div className="flex items-start justify-between">
             <div
-              className="flex h-16 w-16 items-center justify-center rounded-2xl text-3xl"
+              className="flex h-16 w-16 items-center justify-center overflow-hidden rounded-2xl"
               style={{
                 background: `linear-gradient(135deg, oklch(0.78 0.2 ${app.hue} / 0.3), oklch(0.78 0.2 ${app.hue} / 0.05))`,
                 border: `1px solid oklch(0.78 0.2 ${app.hue} / 0.4)`,
                 boxShadow: `0 0 30px -8px oklch(0.78 0.2 ${app.hue} / 0.7), inset 0 1px 0 oklch(1 0 0 / 0.2)`,
-                color: `oklch(0.95 0.1 ${app.hue})`,
               }}
             >
-              {app.glyph}
+              <img src={app.icon} alt={`${app.name} icon`} loading="lazy" width={512} height={512} className="h-full w-full object-cover" />
             </div>
             <div className="font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
               0{index + 1} / 05

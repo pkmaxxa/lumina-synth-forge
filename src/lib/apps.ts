@@ -7,7 +7,8 @@ export interface AppMeta {
   desc: string;
   long: string;
   hue: number;          // accent hue
-  glyph: string;        // unicode glyph for icon
+  glyph: string;        // unicode glyph fallback
+  icon: string;         // path to PNG icon in /public/icons/
   features: string[];
 }
 
@@ -20,6 +21,7 @@ export const APPS: AppMeta[] = [
     long: "Hyper rebuilds your device's response surface — gestures, transitions, and motion all rendered through a unified velocity engine. Every tap arrives a frame earlier.",
     hue: 165,
     glyph: "✦",
+    icon: "/icons/hyper.png",
     features: ["120fps fluid gestures", "Predictive prefetch", "Adaptive haptics", "Zero-latency theming"],
   },
   {
@@ -30,6 +32,7 @@ export const APPS: AppMeta[] = [
     long: "PK Movie is a curated cinematic vault. Stream, queue, and re-experience films inside a vivid, ambient interface engineered for immersion.",
     hue: 200,
     glyph: "◐",
+    icon: "/icons/pk-movie.png",
     features: ["4K HDR streams", "Ambient room lighting sync", "Hyper-fast scrubber", "Personal cinema rooms"],
   },
   {
@@ -40,6 +43,7 @@ export const APPS: AppMeta[] = [
     long: "PK Spotify is a re-imagined music client. Visual EQ, lyric typography, and surface-level animation that breathes with every note.",
     hue: 145,
     glyph: "◉",
+    icon: "/icons/pk-spotify.png",
     features: ["Lossless audio", "Reactive visualizer", "Lyric typography", "Cross-room playback"],
   },
   {
@@ -50,6 +54,7 @@ export const APPS: AppMeta[] = [
     long: "A purified video surface — uninterrupted, ambient, and engineered for focus. Premium playback wrapped in a cinematic shell.",
     hue: 15,
     glyph: "▶",
+    icon: "/icons/youtube-premium.png",
     features: ["Ad-free playback", "Background audio", "Picture-in-Picture", "Offline downloads"],
   },
   {
@@ -60,6 +65,7 @@ export const APPS: AppMeta[] = [
     long: "YT Activator is a precision tool — a one-tap ritual that unlocks the full premium video experience on any device.",
     hue: 280,
     glyph: "⬢",
+    icon: "/icons/yt-activator.png",
     features: ["One-tap activation", "Multi-device sync", "Encrypted handshake", "Auto-renewal hooks"],
   },
 ];
