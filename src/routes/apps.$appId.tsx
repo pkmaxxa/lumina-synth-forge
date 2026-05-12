@@ -160,14 +160,14 @@ function AppPage() {
                 backgroundSize: "60px 60px",
                 maskImage: "radial-gradient(ellipse at center, black 30%, transparent 80%)",
               }} />
-              {/* central glyph */}
+              {/* central icon */}
               <motion.div
-                className="absolute inset-0 flex items-center justify-center text-[14rem] md:text-[20rem]"
-                style={{ color: accent, filter: "drop-shadow(0 0 40px " + accent + ")" }}
+                className="absolute inset-0 flex items-center justify-center"
+                style={{ filter: "drop-shadow(0 0 40px " + accent + ")" }}
                 animate={{ scale: [1, 1.05, 1], rotate: [0, 4, 0] }}
                 transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
               >
-                {app.glyph}
+                <img src={app.icon} alt={`${app.name} preview`} width={512} height={512} className="h-64 w-64 object-contain md:h-96 md:w-96" />
               </motion.div>
               <div className="absolute bottom-6 left-6 right-6 flex items-center justify-between font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
                 <span>Live preview · {app.tag}</span>
