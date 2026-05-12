@@ -86,16 +86,15 @@ function AppPage() {
                 className="relative mx-auto"
               >
                 <motion.div
-                  className="relative flex h-44 w-44 items-center justify-center rounded-[2rem] text-7xl md:h-56 md:w-56 md:text-8xl"
+                  className="relative flex h-44 w-44 items-center justify-center overflow-hidden rounded-[2rem] md:h-56 md:w-56"
                   style={{
                     background: `linear-gradient(135deg, ${accentSoft}, oklch(0.78 0.2 ${app.hue} / 0.04))`,
                     border: `1px solid ${accentSoft}`,
                     boxShadow: `0 30px 80px -20px ${accent}, inset 0 1px 0 oklch(1 0 0 / 0.2)`,
-                    color: `oklch(0.95 0.12 ${app.hue})`,
                   }}
                   animate={{ y: [0, -8, 0] }} transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
                 >
-                  {app.glyph}
+                  <img src={app.icon} alt={`${app.name} icon`} width={512} height={512} className="h-full w-full object-cover" />
                   <div className="pointer-events-none absolute inset-0 rounded-[2rem] opacity-60 blur-2xl" style={{ background: accentSoft }} />
                 </motion.div>
               </motion.div>
