@@ -9,6 +9,7 @@ export interface AppMeta {
   hue: number;          // accent hue
   glyph: string;        // unicode glyph fallback
   icon: string;         // path to PNG icon in /public/icons/
+  preview: string;      // path to PNG preview/screenshot in /public/previews/
   features: string[];
 }
 
