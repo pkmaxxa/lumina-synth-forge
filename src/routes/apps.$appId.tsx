@@ -212,12 +212,13 @@ function AppPage() {
                 <Link key={o.id} to="/apps/$appId" params={{ appId: o.id as AppId }}
                   className="group rounded-2xl glass p-5 transition-all hover:translate-y-[-3px]">
                   <div className="flex items-center gap-3">
-                    <span className="flex h-10 w-10 items-center justify-center rounded-xl text-lg"
+                    <span className="flex h-10 w-10 items-center justify-center overflow-hidden rounded-xl"
                       style={{
                         background: `oklch(0.78 0.2 ${o.hue} / 0.2)`,
-                        color: `oklch(0.95 0.1 ${o.hue})`,
                         border: `1px solid oklch(0.78 0.2 ${o.hue} / 0.4)`,
-                      }}>{o.glyph}</span>
+                      }}>
+                      <img src={o.icon} alt={`${o.name} icon`} loading="lazy" width={512} height={512} className="h-full w-full object-cover" />
+                    </span>
                     <div>
                       <div className="text-sm font-medium">{o.name}</div>
                       <div className="font-mono text-[9px] uppercase tracking-[0.3em] text-muted-foreground">{o.tag}</div>
