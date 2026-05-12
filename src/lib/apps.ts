@@ -7,7 +7,8 @@ export interface AppMeta {
   desc: string;
   long: string;
   hue: number;          // accent hue
-  glyph: string;        // unicode glyph for icon
+  glyph: string;        // unicode glyph fallback
+  icon: string;         // path to PNG icon in /public/icons/
   features: string[];
 }
 
