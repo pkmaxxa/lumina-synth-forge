@@ -167,7 +167,7 @@ function AppPage() {
                 animate={{ scale: [1, 1.05, 1], rotate: [0, 4, 0] }}
                 transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
               >
-                <img src={app.icon} alt={`${app.name} preview`} width={512} height={512} className="h-64 w-64 object-contain md:h-96 md:w-96" />
+                <img src={app.preview} alt={`${app.name} preview`} width={1024} height={576} className="h-full w-full object-cover" />
               </motion.div>
               <div className="absolute bottom-6 left-6 right-6 flex items-center justify-between font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
                 <span>Live preview · {app.tag}</span>

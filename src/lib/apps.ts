@@ -9,6 +9,7 @@ export interface AppMeta {
   hue: number;          // accent hue
   glyph: string;        // unicode glyph fallback
   icon: string;         // path to PNG icon in /public/icons/
+  preview: string;      // path to PNG preview/screenshot in /public/previews/
   features: string[];
 }
 
@@ -22,6 +23,7 @@ export const APPS: AppMeta[] = [
     hue: 165,
     glyph: "✦",
     icon: "/icons/hyper.png",
+    preview: "/previews/hyper.png",
     features: ["120fps fluid gestures", "Predictive prefetch", "Adaptive haptics", "Zero-latency theming"],
   },
   {
@@ -33,6 +35,7 @@ export const APPS: AppMeta[] = [
     hue: 200,
     glyph: "◐",
     icon: "/icons/pk-movie.png",
+    preview: "/previews/pk-movie.png",
     features: ["4K HDR streams", "Ambient room lighting sync", "Hyper-fast scrubber", "Personal cinema rooms"],
   },
   {
@@ -44,6 +47,7 @@ export const APPS: AppMeta[] = [
     hue: 145,
     glyph: "◉",
     icon: "/icons/pk-spotify.png",
+    preview: "/previews/pk-spotify.png",
     features: ["Lossless audio", "Reactive visualizer", "Lyric typography", "Cross-room playback"],
   },
   {
@@ -55,6 +59,7 @@ export const APPS: AppMeta[] = [
     hue: 15,
     glyph: "▶",
     icon: "/icons/youtube-premium.png",
+    preview: "/previews/youtube-premium.png",
     features: ["Ad-free playback", "Background audio", "Picture-in-Picture", "Offline downloads"],
   },
   {
@@ -66,6 +71,7 @@ export const APPS: AppMeta[] = [
     hue: 280,
     glyph: "⬢",
     icon: "/icons/yt-activator.png",
+    preview: "/previews/yt-activator.png",
     features: ["One-tap activation", "Multi-device sync", "Encrypted handshake", "Auto-renewal hooks"],
   },
 ];
