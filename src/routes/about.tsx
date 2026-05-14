@@ -50,7 +50,7 @@ function AboutPage() {
                 // About
               </motion.div>
               <h1 className="text-fluid-h2 mt-5">
-                {"The mind behind".split(" ").map((w, i) => (
+                {"THE dev behind".split(" ").map((w, i) => (
                   <motion.span key={i}
                     initial={{ opacity: 0, y: 40, filter: "blur(15px)" }}
                     animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
@@ -64,14 +64,14 @@ function AboutPage() {
                   animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                   transition={{ delay: 0.5, duration: 1 }}
                   className="text-aurora italic"
-                >PK MAXX.</motion.span>
+                >MAXXA.</motion.span>
               </h1>
 
               <motion.p
                 initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.9, duration: 1 }}
                 className="mt-8 max-w-xl text-fluid-body text-muted-foreground"
               >
-                I build premium digital experiences — not pages, not apps, but immersive worlds. PK MAXX is my personal launcher: a curated set of high-end APKs wrapped in a cinematic, holographic interface.
+                I build premium digital experiences — not pages, not apps, but immersive worlds. MAXXA is my personal launcher: a curated set of high-end APKs wrapped in a cinematic, holographic interface.
               </motion.p>
               <motion.p
                 initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.1, duration: 1 }}

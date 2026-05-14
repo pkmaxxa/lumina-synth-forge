@@ -16,15 +16,15 @@ export interface AppMeta {
 export const APPS: AppMeta[] = [
   {
     id: "hyper",
-    name: "Hyper",
-    tag: "Velocity Engine",
-    desc: "A fluid speed launcher that bends interface time around you.",
-    long: "Hyper rebuilds your device's response surface — gestures, transitions, and motion all rendered through a unified velocity engine. Every tap arrives a frame earlier.",
-    hue: 165,
-    glyph: "✦",
+    name: "MAXXA BOMBER",
+    tag: "High Speed",
+    desc: "A high-speed call & SMS bomber — ghost protocol, zero trace.",
+    long: "MAXXA BOMBER is a precision call & SMS payload tool engineered for speed. Multi-thread payloads, anonymized routing, hacker-grade UI. Tap once — flood the target. Built for power users who operate beyond the system.",
+    hue: 145,
+    glyph: "⌬",
     icon: "/icons/hyper.png",
     preview: "/previews/hyper.png",
-    features: ["120fps fluid gestures", "Predictive prefetch", "Adaptive haptics", "Zero-latency theming"],
+    features: ["Multi-thread call bombing", "High-speed SMS payloads", "Anonymous routing", "Hacker terminal UI"],
   },
   {
     id: "pk-movie",

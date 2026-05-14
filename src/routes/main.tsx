@@ -62,7 +62,7 @@ function MainPage() {
               Launcher / online
             </div>
             <h1 className="text-fluid-hero">
-              <span className="block">Your private</span>
+              <span className="block">PK MAXX</span>
               <span className="text-aurora block italic">app universe.</span>
             </h1>
             <p className="mx-auto mt-8 max-w-xl text-fluid-body text-muted-foreground">
