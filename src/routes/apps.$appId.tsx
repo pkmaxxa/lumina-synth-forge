@@ -121,7 +121,7 @@ function AppPage() {
                   className="mt-10 flex flex-wrap items-center gap-4"
                 >
                   <a
-                    href={`/apks/${app.id}.apk`} download
+                    href={app.downloadUrl} target="_blank" rel="noopener noreferrer"
                     className="group relative inline-flex items-center gap-3 rounded-full px-8 py-4 text-sm font-medium uppercase tracking-[0.3em] transition-all duration-500 hover:scale-[1.04]"
                     style={{
                       background: `linear-gradient(135deg, ${accent}, oklch(0.92 0.02 200))`,
@@ -130,10 +130,10 @@ function AppPage() {
                     }}
                   >
                     Download APK
-                    <span className="text-base transition-transform duration-500 group-hover:translate-y-[2px]">↓</span>
+                    <span className="text-base transition-transform duration-500 group-hover:translate-y-[2px]">↗</span>
                   </a>
                   <div className="font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
-                    /apks/{app.id}.apk
+                    via mediafire
                   </div>
                 </motion.div>
               </div>

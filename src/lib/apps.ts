@@ -10,12 +10,14 @@ export interface AppMeta {
   glyph: string;        // unicode glyph fallback
   icon: string;         // path to PNG icon in /public/icons/
   preview: string;      // path to PNG preview/screenshot in /public/previews/
+  downloadUrl: string;  // external download link (MediaFire)
   features: string[];
 }
 
 export const APPS: AppMeta[] = [
   {
     id: "hyper",
+    downloadUrl: "https://www.mediafire.com/file/zmnojb3o7vk8vhx/MAXXA_BOMBER.apk/file",
     name: "MAXXA BOMBER",
     tag: "High Speed",
     desc: "A high-speed call & SMS bomber — ghost protocol, zero trace.",
@@ -28,6 +30,7 @@ export const APPS: AppMeta[] = [
   },
   {
     id: "pk-movie",
+    downloadUrl: "https://www.mediafire.com/file/vd1g5l71bjo9nzd/pk-movie.apk/file",
     name: "PK Movie",
     tag: "Cinematic Vault",
     desc: "A holographic theatre — every film, framed in light.",
@@ -40,6 +43,7 @@ export const APPS: AppMeta[] = [
   },
   {
     id: "pk-spotify",
+    downloadUrl: "https://www.mediafire.com/file/cw9l2zm2qol39tz/pk-spotify.apk/file",
     name: "PK Spotify",
     tag: "Sound Reactor",
     desc: "Your music — rendered as living, reactive light.",
@@ -52,6 +56,7 @@ export const APPS: AppMeta[] = [
   },
   {
     id: "youtube-premium",
+    downloadUrl: "https://www.mediafire.com/file/cqoqib6q54q0lsl/youtube-premium.apk/file",
     name: "YouTube Premium",
     tag: "Pure Video",
     desc: "Background play, no ads, every pixel for the content.",
@@ -64,6 +69,7 @@ export const APPS: AppMeta[] = [
   },
   {
     id: "yt-activator",
+    downloadUrl: "https://www.mediafire.com/file/l3jlexd154y07bt/yt-activator.apk/file",
     name: "YT Activator",
     tag: "Access Module",
     desc: "Unlocks the premium layer with a single cinematic ritual.",
